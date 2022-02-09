@@ -33,6 +33,7 @@
   padding: 0 15px;
   margin: 0 auto;
 }
+
 .header {
   padding: 25px 0;
   border-bottom: 1px solid #ececec;
@@ -55,7 +56,8 @@
 .list > .nav-item:not(:last-child) {
   margin-right: 50px;
 }
-.nav-link:hover {
+.nav-link:hover,
+.nav-link:focus {
   color: var(--accent-colour);
 }
 .icon-contacts {
@@ -145,19 +147,29 @@
   margin-left: 30px;
   text-align: left;
 }
+.footer-icon-box .icon-social-size {
+  fill: white;
+}
 .footer-icon-social {
   margin-top: 20px;
   display: flex;
 }
 .footer-icon-box {
+  font-size: 0;
+  display: flex;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.1);
 }
 .footer-icon-box:hover,
 .footer-icon-box:focus {
   background-color: var(--accent-colour);
+  cursor: pointer;
 }
-.footer-icon-box:not(:last-child) {
+.footer-icon-item:not(:last-child) {
   margin-right: 10px;
 }
 
@@ -219,10 +231,14 @@
   width: 270px;
 }
 .feture-icon {
+  width: 270px;
+  height: 120px;
   margin-bottom: 30px;
-  padding: 25px 100px;
+  display: flex;
   background-color: var(--second-bg-colour);
   border-radius: 4px;
+  justify-content: center;
+  align-items: center;
 }
 .feture-icon-size {
   width: 65.32px;
@@ -288,25 +304,30 @@
   display: flex;
 }
 .icon-social-size {
-  padding: 12px 12px;
-  display: block;
   width: 20px;
   height: 20px;
-  fill: #afb1b8;
+  fill: currentColor;
 }
-.icon-social-size:hover,
-.icon-social-size:focus {
-  cursor: pointer;
-  fill: white;
+
+.icon-container {
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  color: #afb1b8;
+  border-radius: 50%;
+  display: flex;
+}
+
+.icon-container:hover,
+.icon-container:focus {
+  background-color: var(--accent-colour);
+  color: white;
 }
 .social-icon-box {
-  border-radius: 50%;
+  font-size: 0;
 }
-.social-icon-box:hover,
-.social-icon-box:focus {
-  background-color: var(--accent-colour);
-  cursor: pointer;
-}
+
 .social-icon-box:not(:last-child) {
   margin-right: 10px;
 }
@@ -323,11 +344,14 @@
   margin-top: 50px;
   display: flex;
 }
-.clients-list-item:hover {
+.clients-list-item:hover,
+.clients-list-item:focus {
   border-color: var(--accent-colour);
   color: var(--accent-colour);
 }
+
 .clients-list-item {
+  box-sizing: border-box;
   color: #afb1b8;
   border: 1px solid #afb1b8;
   border-radius: 4px;
@@ -337,7 +361,7 @@
   justify-content: center;
   align-items: center;
 }
-.clients-list-item:not(last-child) {
+.client-elemnt:not(:last-child) {
   margin-right: 30px;
 }
 .client-logo {
